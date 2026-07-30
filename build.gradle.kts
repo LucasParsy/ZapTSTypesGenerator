@@ -149,6 +149,7 @@ tasks.register<JavaCompile>("generateTypes") {
             "org.bsc.processor.TypescriptProcessor",
             "-Ats.outfile=zap-api",
             "-Ats.registry=zapApi",
+            "-AignoreDeprecated=true",
             "-Ats.scan=" + scanRoots.joinToString(File.pathSeparator),
             "-Ats.scan.include=$declaredPackages",
             // Annotation processing emits notes of its own and the declared JDK types include
